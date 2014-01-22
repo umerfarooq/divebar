@@ -10,8 +10,6 @@ Version: 1.0
 /*---------------------------General Clases---------------------------------------*/
 
 body {
-/*    background: url(images/body-bg.png) repeat-x center top;*/
-    background-color: #0c0c0c;
     font-size:14px;
     color:#efefef;
     font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -43,6 +41,9 @@ img {
 }
 :focus {
     outline: 0;
+}
+#container {
+    background: #000 url(images/body-bg.png) repeat-x center bottom;
 }
 
 #layout {
@@ -168,6 +169,8 @@ header nav.menu-nav ul li a {
 }
 .banner {
     margin-bottom:15px;
+    max-height: 500px;
+    overflow-y: auto;
 }
 
 .content p {
