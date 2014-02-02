@@ -32,7 +32,7 @@ function register_custom_menus() {
     register_nav_menus(array(
         'header_navigation' => 'Global Navigation in the header.',
         'menu_navigation' => 'Navigation to the Menu Pages.',
-        'footer_menu' => 'Footer menu.',
+        'footer_navigation' => 'Footer menu.'
     ));
 }
 
@@ -81,15 +81,15 @@ function images($file) {
 }
 
 function fb_link() {
-    echo 'https://www.facebook.com/DoctorNancySnyderman';
+    echo 'https://www.facebook.com/DiveBarNYC';
 }
 
 function twitter_link() {
-    echo 'https://twitter.com/DrNancyNBCNEWS';
+    echo 'https://twitter.com/DiveBarNYC';
 }
 
 function instagram_link() {
-    echo 'http://instagram.com/nsnyderman';
+    echo '';
 }
 
 function page_url($title) {

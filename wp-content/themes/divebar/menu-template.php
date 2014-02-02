@@ -12,29 +12,34 @@
     <?php
     if (is_page('Booze')) {
         $cat_slug = 'booze';
+        $category = get_category_by_slug($cat_slug);
     } elseif (is_page('Food')) {
         $cat_slug = 'food';
+        $category = get_category_by_slug($cat_slug);
     } elseif (is_page('Events')) {
         $cat_slug = 'events';
+        $category = get_category_by_slug($cat_slug);
     }
     $args = array(
-        'category_name' => $cat_slug
+        'parent' => $category->cat_ID
     );
-    $posts = new WP_Query($args);
+    $sub_categories = get_categories('hide_empty=0&child_of=' . $category->cat_ID);
     ?>
 
 
-    <?php if ($posts->have_posts()) : ?>
+    <?php if ($sub_categories) : ?>
         <div class="tab">
             <ul>
-                <?php while ($posts->have_posts()) : $posts->the_post(); ?>
+                <?php foreach ($sub_categories as $sub_category): ?>
                     <li>
-                        <?php the_title(); ?>
+                        <?php echo $sub_category->name; ?>
                     </li>
-                <?php endwhile; ?>
+                <?php endforeach; ?>
             </ul>
         </div>
     <?php endif; ?>
+
+
 
     <div class="banner">
         <?php
@@ -50,7 +55,7 @@
             </div>
             <?php
         } elseif (is_page('Events')) {
-            echo do_shortcode('[gview file="http://www.davistribe.org/temp/testfiles/pregnancy.pdf"]');
+            
         }
         ?>
     </div>

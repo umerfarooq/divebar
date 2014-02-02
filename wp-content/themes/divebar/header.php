@@ -10,10 +10,21 @@
 
     <body>
         <div id="container">
-        <div id="layout">
+            <div id="layout">
 
-            <header>
-                <hgroup>
+                <header>
+                    <div class="social">
+                        <ul>
+                            <li class="facebook"><a href="<?php fb_link(); ?>" target="_blank">facebook</a></li>
+                            <li class="twitter"><a href="<?php twitter_link(); ?>" target="_blank">twitter</a></li>
+                            <li class="instagram"><a href="#">instagram</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <input type="text" placeholder="search"  />
+                    </div>
+
                     <div id="logo">
                         <a href="/"><img src="<?php images('logo.png'); ?>" alt="Dive Bar" /></a>
                     </div>
@@ -25,16 +36,7 @@
                     <nav class="menu-nav">
                         <?php display_menu('menu_navigation', '', '', ''); ?>
                     </nav>
-                </hgroup>
 
-                <div class="search"><input type="text" value="search" /></div>
-                <div class="social">
-                    <ul>
-                        <li class="facebook"><a href="#">facebook</a></li>
-                        <li class="twitter"><a href="#">twitter</a></li>
-                        <li class="youtube"><a href="#">youtube</a></li>
 
-                    </ul>
-                </div>
-                <div class="clr"></div>
-            </header>
+                    <div class="clr"></div>
+                </header>
