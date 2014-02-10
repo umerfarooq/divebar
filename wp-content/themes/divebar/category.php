@@ -66,9 +66,29 @@
             </div>
             <?php
         } elseif ($events) {
-            echo "Events";
+            query_posts(array('category_name' => $category->slug) );
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    ?>
+
+                    <div class="event">
+                        <div class="date"><?php the_field('event_date'); ?></div>
+                        <div class="desc"><strong><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></strong> <p><?php the_field('event_description'); ?></p></div>
+                        <div class="cat">
+                            <?php $field = get_field_object('event_category'); ?>
+                            <?php $value = get_field('event_category'); ?>
+                            <?php $label = $field['choices'][$value]; ?>
+                            <strong><?php echo $label; ?></strong>
+                        </div>
+                    </div>
+
+                    <?php
+                endwhile;
+            endif;
+            wp_reset_query();
         }
         ?>
+       
     </div>
     <div class="clr"></div>    
 </div>

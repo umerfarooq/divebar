@@ -239,11 +239,10 @@ header nav.menu-nav ul li a {
 
 }
 .content .tab ul li a {
-/*    color:#000000;*/
+    /*    color:#000000;*/
     line-height:72px;
     display:inline-block;
 }
-
 
 footer {
     position: relative;
@@ -353,4 +352,63 @@ ul.merchList li .merchFulRDetail{
     padding-left:25px;
     line-height:50px;
     text-decoration: none;
+}
+
+/*.....................EVENTS......................*/
+.event { border-bottom: 2px dashed #FFF; float: left; width: 100%; padding-bottom: 15px; margin-bottom: 15px; }
+.event a { color: #EFEFEF; }
+.event div { float: left; }
+.event .date { width: 15%; }
+.event .desc { width: 65%; }
+.event .desc strong { text-transform: uppercase; }
+.event .cat { width: 20%; text-align: center; text-transform: uppercase; }
+
+/*.....................EVENT POST......................*/
+.eventDetail {
+    float:left;
+    width: 100%;
+    margin-bottom:20px;
+    padding-top: 30px;
+}
+
+.eventDetailH{
+    margin-bottom:15px;
+    overflow: auto;
+
+}
+.eventDetailH h1{
+    font-size: 24px;
+    font-weight: normal;
+    float: left;
+    width: 80%;
+}
+.eventDetailH .share {
+    width: 20%;
+    float: left;
+    text-align: right;
+}
+.eventDetailH h2{
+    font-size: 18px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.eventPhoto {
+    width:65%;
+    float:left;
+    margin-right:20px;}
+
+.eventPhoto img {
+    width: 570px;
+    height: 330px;
+}
+
+.eventRight {
+    width:32%;
+    float:right;
+}
+
+.eventDesc{
+    font-size:16px;
+    margin-top:25px;
+    margin-bottom:15px;
 }
