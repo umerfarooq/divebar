@@ -17,7 +17,7 @@
                         <ul>
                             <li class="facebook"><a href="<?php fb_link(); ?>" target="_blank">facebook</a></li>
                             <li class="twitter"><a href="<?php twitter_link(); ?>" target="_blank">twitter</a></li>
-                            <li class="instagram"><a href="#">instagram</a></li>
+                            <li class="instagram"><a href="<?php instagram_link(); ?>" target="_blank">instagram</a></li>
 
                         </ul>
                     </div>

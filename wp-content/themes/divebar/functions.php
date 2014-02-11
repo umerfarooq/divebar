@@ -89,7 +89,7 @@ function twitter_link() {
 }
 
 function instagram_link() {
-    echo '';
+    echo 'http://instagram.com/divebarnyc';
 }
 
 function page_url($title) {
