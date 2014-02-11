@@ -144,7 +144,7 @@ header nav ul li a {
 header nav.menu-nav {
     position:absolute;
     top:140px;
-    right:270px;
+    right:290px;
     z-index:1;
     font-size:24px;
     letter-spacing: 10px;
@@ -197,8 +197,11 @@ header nav.menu-nav ul li a {
 
 .banner {
     margin-bottom:15px;
-    max-height: 500px;
+    min-height: 250px;
     overflow-y: auto;
+    float: left;
+    margin-top: 20px;
+    width: 100%;
 }
 
 .banner #rotator {
@@ -233,7 +236,7 @@ header nav.menu-nav ul li a {
 .content .tab{
     display:inline-block;
     width:960px;
-    margin:20px 0 20px 0;
+    margin:20px 0 0 0;
 }	
 .content .tab ul{
     text-align:center;
@@ -399,7 +402,8 @@ ul.merchList li .merchFulRDetail{
 
 /*.....................EVENTS......................*/
 .event { border-bottom: 2px dashed #FFF; float: left; width: 100%; padding-bottom: 15px; margin-bottom: 15px; }
-.event a { color: #EFEFEF; }
+.event a { color: #E6AF00; }
+.event a:hover { color: #fbbf02; }
 .event div { float: left; }
 .event .date { width: 15%; }
 .event .desc { width: 65%; }
@@ -412,23 +416,25 @@ ul.merchList li .merchFulRDetail{
     width: 100%;
     margin-bottom:20px;
     padding-top: 30px;
+    min-height: 250px;
 }
 
 .eventDetailH{
     margin-bottom:15px;
-    overflow: auto;
-
+    float: left;
+    width: 100%;
 }
 .eventDetailH h1{
     font-size: 24px;
     font-weight: normal;
     float: left;
-    width: 80%;
+    width: 75%;
+    color: #E6AF00;
 }
 .eventDetailH .share {
     width: 20%;
     float: left;
-    text-align: right;
+    text-align: justify;
 }
 .eventDetailH h2{
     font-size: 18px;

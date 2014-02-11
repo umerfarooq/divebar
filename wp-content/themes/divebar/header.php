@@ -21,10 +21,9 @@
 
                         </ul>
                     </div>
-                    <div class="search">
-                        <input type="text" placeholder="search"  />
-                    </div>
-
+                    
+                    <?php get_search_form(); ?>
+                    
                     <div id="logo">
                         <a href="/"><img src="<?php images('logo.png'); ?>" alt="Dive Bar" /></a>
                     </div>
