@@ -105,6 +105,11 @@ function include_detail_post($file = '_post.php') {
     include(INCLUDE_PATH . $file);
 }
 
+function include_partial($file = 'merch-news-navigation.php') {
+    include($file);
+}
+
+
 // get the first category id
 function get_first_category($post_id=false) {
     $category = get_the_category($post_id);

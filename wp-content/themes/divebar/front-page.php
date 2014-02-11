@@ -6,5 +6,7 @@
     </div>
     <div class="clr"></div>
 
+    <?php include_partial('merch-news-navigation.php'); ?>
+
 </div>
 <?php get_footer(); ?>
