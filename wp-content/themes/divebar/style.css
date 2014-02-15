@@ -291,19 +291,20 @@ header nav.menu-nav ul li a {
     line-height:72px;
     display:inline-block;
 }
-.content .links .tab ul li a.news {
+.content .links .inter-nav ul li:first-child a {
     background: url(images/news-tab.png) no-repeat 0 0;
     width:119px;
     height:72px;
     padding-left:103px;
+    color: #000 !important;
 }
-.content .links .tab ul li a.month {
+.content .links .inter-nav ul li:last-child a {
     background: url(images/month-tab.png) no-repeat 0 0;
     width:187px;
     height:72px;
     padding-left:35px;
+    color: #000 !important;
 }
-
 
 footer {
     background: none repeat scroll 0 0 #E6AF00;

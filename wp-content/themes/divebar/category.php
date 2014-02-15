@@ -54,9 +54,9 @@
 
     <div class="banner">
         <?php
+        query_posts(array('category_name' => $category->slug));
+
         if ($beer) {
-            echo do_shortcode('[gview file="http://www.davistribe.org/temp/testfiles/pregnancy.pdf"]');
-        } elseif ($food) {
             ?>
             <div id="menu_widget">
                 <a href="http://www.beermenus.com/?ref=widget">Powered by BeerMenus</a>
@@ -65,8 +65,15 @@
                 <script src="http://www.beermenus.com/menu_widgets/203" type="text/javascript" charset="utf-8"></script>
             </div>
             <?php
+        } elseif ($food) {
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    $file_path = get_field('menu_file');
+                    echo do_shortcode('[gview file="' . $file_path . '"]');
+                endwhile;
+            endif;
+            wp_reset_query();
         } elseif ($events) {
-            query_posts(array('category_name' => $category->slug) );
             if (have_posts()) :
                 while (have_posts()) : the_post();
                     ?>
@@ -88,11 +95,11 @@
             wp_reset_query();
         }
         ?>
-       
+
     </div>
     <div class="clr"></div>
-    
+
     <?php include_partial('merch-news-navigation.php'); ?>
-    
+
 </div>
 <?php get_footer(); ?>

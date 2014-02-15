@@ -32,6 +32,7 @@ function register_custom_menus() {
     register_nav_menus(array(
         'header_navigation' => 'Global Navigation in the header.',
         'menu_navigation' => 'Navigation to the Menu Pages.',
+        'internal_navigation' => 'Navigation to Internal Pages.',
         'footer_navigation' => 'Footer menu.'
     ));
 }
