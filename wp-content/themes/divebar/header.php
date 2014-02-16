@@ -21,11 +21,14 @@
 
                         </ul>
                     </div>
-                    
+
                     <?php get_search_form(); ?>
-                    
+
                     <div id="logo">
                         <a href="/"><img src="<?php images('logo.png'); ?>" alt="Dive Bar" /></a>
+                        <a class="st101" href="/">101st Street</a>
+                        <a class="st96" href="/">96th Street</a>
+                        <a class="st75" href="/">75th Street</a>
                     </div>
                     <nav>
                         <ul>

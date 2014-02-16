@@ -65,6 +65,24 @@ header hgroup{
     left:225px;
     z-index:10;
 }
+#logo a {
+    color: #E6AF00;
+}
+#logo .st101 {
+    position: absolute; 
+    top: 115px; 
+    left: 51px;
+}
+#logo .st96 { 
+    position: absolute; 
+    top: 135px; 
+    left: 225px;
+}
+#logo .st75 { 
+    position: absolute; 
+    top: 115px; 
+    left: 393px;
+}
 header .social {
     position:absolute;
     top:27px;
@@ -143,7 +161,7 @@ header nav ul li a {
 }
 header nav.menu-nav {
     position:absolute;
-    top:140px;
+    top:155px;
     right:290px;
     z-index:1;
     font-size:24px;
@@ -183,18 +201,21 @@ header nav.menu-nav ul li a {
     float: left;
     border-bottom: 2px solid;
     width: 100%;
+    font-family: 'JackInputRegular';
 }
-
-.headline h1 {
+.headline ul li {
     float: left;
-    width: 30%;
 }
-
-.headline p {
-    float: left;
+.headline li {
+    width: 10%;
+}
+.headline li p, h1 {
+    margin-top: 50px;
+}
+.headline li:last-child {
     width: 70%;
+    margin-left: 10%;
 }
-
 .banner {
     margin-bottom:15px;
     min-height: 250px;

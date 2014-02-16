@@ -23,12 +23,23 @@
     endswitch;
     ?>
     <div class="headline">
-        <h1>
-            <?php echo get_the_title($page); ?>
-        </h1>
-        <p>
-            <?php echo apply_filters('the_content', $page->post_content); ?>
-        </p>
+        <ul>
+            <li>
+                <?php if ($events): ?>
+                    <img src="<?php images('events.png'); ?>" />
+                <?php elseif ($food): ?>
+                    <img src="<?php images('food.png'); ?>" />
+                <?php elseif ($beer): ?>
+                    <img src="<?php images('beer.png'); ?>" />
+                <?php endif; ?>
+            </li>
+            <li>
+                <h1><?php echo get_the_title($page); ?></h1>
+            </li>
+            <li>
+                <?php echo apply_filters('the_content', $page->post_content); ?>
+            </li>
+        </ul>
     </div>
 
     <?php if ($sub_categories) : ?>
