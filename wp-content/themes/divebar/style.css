@@ -209,7 +209,10 @@ header nav.menu-nav ul li a {
 .headline li {
     width: 10%;
 }
-.headline li p, h1 {
+.headline li p {
+    margin-top: 50px;
+}
+.headline li h1 {
     margin-top: 50px;
 }
 .headline li:last-child {
