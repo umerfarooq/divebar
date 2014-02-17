@@ -20,6 +20,10 @@
             $events = true;
             $page = get_page_by_path('events');
             break;
+        case 'locations':
+            $locations = true;
+            $page = get_page_by_path('locations');
+            break;
     endswitch;
     ?>
     <div class="headline">
@@ -31,6 +35,8 @@
                     <img src="<?php images('food.png'); ?>" />
                 <?php elseif ($beer): ?>
                     <img src="<?php images('beer.png'); ?>" />
+                <?php elseif ($locations): ?>
+                    <img src="<?php images('phone.png'); ?>" />
                 <?php endif; ?>
             </li>
             <li>
@@ -83,7 +89,6 @@
                     echo do_shortcode('[gview file="' . $file_path . '"]');
                 endwhile;
             endif;
-            wp_reset_query();
         } elseif ($events) {
             if (have_posts()) :
                 while (have_posts()) : the_post();
@@ -103,8 +108,50 @@
                     <?php
                 endwhile;
             endif;
-            wp_reset_query();
+        } elseif ($locations) {
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    ?>
+                    <ul class="locations">
+                        <li class="directions">
+                            <h1>Directions</h1>
+                            <p>
+                                <?php the_field('directions') ?>
+                            </p>
+                            <div class="map"></div>
+                        </li>
+                        <li class="get-touch">
+                            <h1>Get in Touch</h1>
+
+                            <?php if (get_field('get_in_touch')): ?>
+                                <ul>
+                                    <?php while (the_repeater_field('get_in_touch')): ?>
+                                        <li>
+                                            <h3><?php the_sub_field('heading'); ?></h3>
+                                            <p><?php the_sub_field('value'); ?></p>
+                                        </li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
+
+                            <h1>Hours</h1>
+                            <?php if (get_field('hours')): ?>
+                                <ul>
+                                    <?php while (the_repeater_field('hours')): ?>
+                                        <li>
+                                            <h3><?php the_sub_field('heading'); ?></h3>
+                                            <p><?php the_sub_field('value'); ?></p>
+                                        </li>
+                                    <?php endwhile; ?>
+                                </ul>
+                            <?php endif; ?>
+                        </li>
+                    </ul>
+                    <?php
+                endwhile;
+            endif;
         }
+        wp_reset_query();
         ?>
 
     </div>

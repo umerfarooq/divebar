@@ -5,9 +5,9 @@
             $field = get_field_object('event_category');
             $value = get_field('event_category');
             $label = $field['choices'][$value];
-            $date = DateTime::createFromFormat('Y/m/d', get_field('event_date'));
+//            $date = DateTime::createFromFormat('Y/m/d', get_field('event_date'));
             ?>
-            <?php echo strtoupper($label); ?> &nbsp; | &nbsp; <?php echo $date->format('F j, Y'); ?> 
+            <?php echo strtoupper($label); ?> &nbsp; | &nbsp; <?php echo get_field('event_date'); ?> 
         </h2>
 
         <div>
@@ -35,7 +35,7 @@
     <?php endif; ?>
 
     <div class="eventRight">
-        <span>TEST TEST TEST TEST TEST TEST TEST TEST TEST</span> 
+        <p><?php the_field('event_caption') ?></p> 
     </div>
 
     <div class="clr"></div>

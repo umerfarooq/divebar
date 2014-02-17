@@ -246,6 +246,33 @@ header nav.menu-nav ul li a {
     font-weight: bold;
 }
 
+.banner .locations li.directions {
+    width: 65%;
+}
+
+.banner .locations li.get-touch {
+    width: 35%;
+}
+
+.banner .locations h1 {
+    margin: 0 0 10px 0;
+    font-family: 'JackInputRegular';
+}
+
+.banner .locations li.directions, li.get-touch {
+    float: left;
+}
+
+.banner .locations li.get-touch ul {
+    margin-bottom: 25px;
+}
+
+.banner .locations .map {
+    width: 80%;
+    height: 250px;
+    background-color: white;
+}
+
 .content {
     position:relative;
 }
