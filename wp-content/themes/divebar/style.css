@@ -270,10 +270,11 @@ header nav.menu-nav ul li a {
     margin-bottom: 25px;
 }
 
-.banner .locations .map {
-    width: 80%;
-    height: 250px;
-    background-color: white;
+.banner .locations .acf-map {
+	width: 80%;
+	height: 300px;
+	border: #ccc solid 1px;
+	margin: 20px 0;
 }
 
 .content {
