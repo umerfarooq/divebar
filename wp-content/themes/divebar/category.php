@@ -3,11 +3,25 @@
 
     <?php
     $category = get_queried_object();
-    $parent_category = get_category($category->category_parent);
-    $sub_categories = get_categories('hide_empty=0&child_of=' . $parent_category->cat_ID);
+
+    $parent_category = null;
+    if ($category->category_parent):
+        $parent_category = get_category($category->category_parent);
+    endif;
 
     $beer = $food = $events = false;
-    switch ($parent_category->slug):
+
+    $category_object = null;
+    $sub_categories = null;
+    
+    if (!empty($parent_category)):
+        $category_object = $parent_category;
+        $sub_categories = get_categories('hide_empty=0&child_of=' . $parent_category->cat_ID);
+    else:
+        $category_object = $category;
+    endif;
+
+    switch ($category_object->slug):
         case 'beer':
             $beer = true;
             $page = get_page_by_path('beer');
@@ -36,7 +50,7 @@
                 <?php elseif ($beer): ?>
                     <img src="<?php images('beer.png'); ?>" />
                 <?php elseif ($locations): ?>
-                    <img src="<?php images('phone.png'); ?>" />
+                    <img src="<?php images('location.png'); ?>" />
                 <?php endif; ?>
             </li>
             <li>

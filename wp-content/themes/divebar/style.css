@@ -219,9 +219,14 @@ header nav.menu-nav ul li a {
     width: 70%;
     margin-left: 10%;
 }
+.headline img {
+    max-width: 85px;
+    max-height: 83px;
+}
 .banner {
     margin-bottom:15px;
     min-height: 250px;
+    max-height: 600px;
     overflow-y: auto;
     float: left;
     margin-top: 20px;
@@ -367,8 +372,10 @@ footer {
 }
 
 footer ul {
-    margin: auto;
-    width: 700px;
+/*    margin: auto;
+    width: 700px;*/
+    position: absolute;
+    left: 35%;
 }
 
 footer ul li {
@@ -506,11 +513,25 @@ ul.merchList li .merchFulRDetail{
 
 .eventRight {
     width:32%;
-    float:right;
+    float:right;    
+}
+
+.eventRight h3 {
+    font-family: 'JackInputRegular';
+    font-size: 26px;
+    font-weight: normal;
+    line-height: 30px;
+    font-style: italic;
 }
 
 .eventDesc{
     font-size:16px;
     margin-top:25px;
     margin-bottom:15px;
+}
+
+#menu_widget {
+    width: 99% !important;
+    padding: 10px !important;
+    max-width: 99% !important;
 }

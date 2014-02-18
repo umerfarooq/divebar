@@ -35,7 +35,7 @@
     <?php endif; ?>
 
     <div class="eventRight">
-        <p><?php the_field('event_caption') ?></p> 
+        <h3><?php the_field('event_caption') ?></h3> 
     </div>
 
     <div class="clr"></div>
