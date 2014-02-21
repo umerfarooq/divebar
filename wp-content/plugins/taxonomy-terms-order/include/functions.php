@@ -1,33 +1,7 @@
 <?php
 
-    
-    /**
-    * Return the user level
-    * 
-    * This is deprecated, will be removed in the next versions
-    * 
-    * @param mixed $return_as_numeric
-    */
-    function userdata_get_user_level($return_as_numeric = FALSE)
-        {
-            global $userdata;
-            
-            $user_level = '';
-            for ($i=10; $i >= 0;$i--)
-                {
-                    if (current_user_can('level_' . $i) === TRUE)
-                        {
-                            $user_level = $i;
-                            if ($return_as_numeric === FALSE)
-                                $user_level = 'level_'.$i;    
-                            break;
-                        }    
-                }        
-            return ($user_level);
-        }
         
-        
-    function cpt_info_box()
+    function tto_info_box()
         {
             ?>
                 <div id="cpt_info_box">
@@ -62,9 +36,9 @@
                         </div>
                     </div>
                     
-                    <p><?php _e('Did you find this plugin useful? Please support our work with a donation or write an article about this plugin in your blog with a link to our site', 'cpt') ?> <a href="http://www.nsp-code.com/" target="_blank"><strong>http://www.nsp-code.com/</strong></a>.</p>
-                    <h4><?php _e('Did you know there is available an Advanced version of this plug-in?', 'cpt') ?> <a target="_blank" href="http://www.nsp-code.com/premium-plugins/wordpress-plugins/advanced-post-types-order/"><?php _e('Read more', 'cpt') ?></a></h4>
-                    <p><?php _e('Check our', 'cpt') ?> <a target="_blank" href="http://wordpress.org/extend/plugins/taxonomy-terms-order/">Category Order - Taxonomy Terms Order</a> <?php _e('plugin which allow to custom sort categories and custom taxonomies terms', 'cpt') ?> </p>
+                    <p><?php _e( "Did you find this plugin useful? Please support our work with a donation or write an article about this plugin in your blog with a link to our site", 'to' ) ?> <br /><strong>http://www.nsp-code.com/</strong>.</p>
+                    <h4><?php _e( "Did you know there is available a more advanced version of this plug-in?", 'to' ) ?> <a target="_blank" href="http://www.nsp-code.com/premium-plugins/wordpress-plugins/advanced-taxonomy-terms-order/"><?php _e( "Read more", 'to' ) ?></a></h4>
+                    <p><?php _e( "Check our", 'to' ) ?> <a target="_blank" href="http://wordpress.org/extend/plugins/post-types-order/">Post Types Order</a> <?php _e( "plugin which allow to custom sort all posts, pages, custom post types", 'to' ) ?> </p>
                     
                     <div class="clear"></div>
                 </div>

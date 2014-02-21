@@ -103,8 +103,15 @@
                 endwhile;
             endif;
             wp_reset_query();
-        } elseif ($events) {
-            query_posts(array('category_name' => $category->slug));
+        } elseif ($events) {            
+            $today = date('m/d/Y');
+            query_posts(array('category_name' => $category->slug,
+                'meta_key' => 'event_date',
+                'orderby' => 'meta_value',
+		'order' => 'ASC',		
+                'meta_query' => array(
+                    array('key' => 'event_date', 'compare' => '>=', 'value' => $today))));
+
             if (have_posts()) :
                 while (have_posts()) : the_post();
                     ?>
@@ -180,7 +187,7 @@
     </div>
     <div class="clr"></div>
 
-<?php include_partial('merch-news-navigation.php'); ?>
+    <?php include_partial('merch-news-navigation.php'); ?>
 
 </div>
 <?php get_footer(); ?>
