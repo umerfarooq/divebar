@@ -7,7 +7,7 @@
         <link href="<?php echo get_fonts_stylesheet_uri(); ?>" rel="stylesheet" type="text/css" />
         <?php wp_head(); ?>  
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        
+
         <script type="text/javascript">
             (function($) {
  
@@ -167,7 +167,7 @@
  
             })(jQuery);
         </script>
-        
+
     </head>
 
     <body>
@@ -188,19 +188,19 @@
 
                     <div id="logo">
                         <a href="/"><img src="<?php images('logo.png'); ?>" alt="Dive Bar" /></a>
+
+                        <?php display_menu('locations_navigation', '', '', ''); ?>
+
+<!--                        <a class="st96" href="/">96th Street</a>
                         <a class="st101" href="/">101st Street</a>
-                        <a class="st96" href="/">96th Street</a>
-                        <a class="st75" href="/">75th Street</a>
+                        <a class="st75" href="/">75th Street</a>-->
                     </div>
                     <nav>
-                        <ul>
-                            <?php display_menu('header_navigation', '', '', ''); ?>
-                        </ul>
+                        <?php display_menu('header_navigation', '', '', ''); ?>
                     </nav>
                     <nav class="menu-nav">
                         <?php display_menu('menu_navigation', '', '', ''); ?>
                     </nav>
-
 
                     <div class="clr"></div>
                 </header>

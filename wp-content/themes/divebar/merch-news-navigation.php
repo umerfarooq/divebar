@@ -1,5 +1,5 @@
 <div class="links">
-    <h1>- established 1989 -</h1>
+    <h1>- est. 1989 -</h1>
     <div class="tab inter-nav">        
         <?php display_menu('internal_navigation', '', '', ''); ?>
         <!--<ul>

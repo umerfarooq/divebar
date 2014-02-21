@@ -13,7 +13,7 @@
 
     $category_object = null;
     $sub_categories = null;
-    
+
     if (!empty($parent_category)):
         $category_object = $parent_category;
         $sub_categories = get_categories('hide_empty=0&child_of=' . $parent_category->cat_ID);
@@ -85,8 +85,6 @@
 
     <div class="banner">
         <?php
-        query_posts(array('category_name' => $category->slug));
-
         if ($beer) {
             ?>
             <div id="menu_widget">
@@ -97,13 +95,16 @@
             </div>
             <?php
         } elseif ($food) {
+            query_posts(array('category_name' => $category->slug));
             if (have_posts()) :
                 while (have_posts()) : the_post();
                     $file_path = get_field('menu_file');
                     echo do_shortcode('[gview file="' . $file_path . '"]');
                 endwhile;
             endif;
+            wp_reset_query();
         } elseif ($events) {
+            query_posts(array('category_name' => $category->slug));
             if (have_posts()) :
                 while (have_posts()) : the_post();
                     ?>
@@ -122,7 +123,9 @@
                     <?php
                 endwhile;
             endif;
+            wp_reset_query();
         } elseif ($locations) {
+            query_posts(array('category_name' => $category->slug));
             if (have_posts()) :
                 while (have_posts()) : the_post();
                     ?>
@@ -171,14 +174,13 @@
                     <?php
                 endwhile;
             endif;
+            wp_reset_query();
         }
-        wp_reset_query();
         ?>
-
     </div>
     <div class="clr"></div>
 
-    <?php include_partial('merch-news-navigation.php'); ?>
+<?php include_partial('merch-news-navigation.php'); ?>
 
 </div>
 <?php get_footer(); ?>
