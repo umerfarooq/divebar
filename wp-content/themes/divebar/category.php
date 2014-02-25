@@ -86,13 +86,22 @@
     <div class="banner">
         <?php
         if ($beer) {
+            query_posts(array('category_name' => $category->slug));
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    ?>
+                    <div id="menu_widget">
+                        <a href="http://www.beermenus.com/?ref=widget"></a>
+                    </div>
+                    <div>
+                        <script src="<?php the_field('script_url'); ?>" type="text/javascript" charset="utf-8"></script>
+                    </div>
+                    <?php
+                endwhile;
+            endif;
+            wp_reset_query();
             ?>
-            <div id="menu_widget">
-                <a href="http://www.beermenus.com/?ref=widget">Powered by BeerMenus</a>
-            </div>
-            <div>
-                <script src="http://www.beermenus.com/menu_widgets/203" type="text/javascript" charset="utf-8"></script>
-            </div>
+
             <?php
         } elseif ($food) {
             query_posts(array('category_name' => $category->slug));
@@ -103,12 +112,12 @@
                 endwhile;
             endif;
             wp_reset_query();
-        } elseif ($events) {            
+        } elseif ($events) {
             $today = date('m/d/Y');
             query_posts(array('category_name' => $category->slug,
                 'meta_key' => 'event_date',
                 'orderby' => 'meta_value',
-		'order' => 'ASC',		
+                'order' => 'ASC',
                 'meta_query' => array(
                     array('key' => 'event_date', 'compare' => '>=', 'value' => $today))));
 
