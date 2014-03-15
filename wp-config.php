@@ -18,8 +18,8 @@
 
 if (file_exists(dirname(__FILE__) . '/local-config.php')) {
     include( dirname(__FILE__) . '/local-config.php' );
-} elseif (file_exists(dirname(__FILE__) . '/staging-config.php')) {
-    include( dirname(__FILE__) . '/staging-config.php' );
+} elseif (file_exists(dirname(__FILE__) . '/../shared/db-config.php')) {
+    include( dirname(__FILE__) . '/../shared/db-config.php' );
 } else {
     /** The name of the database for WordPress */
     define('DB_NAME', 'divebar_production');
