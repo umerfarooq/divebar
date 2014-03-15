@@ -17,7 +17,6 @@
 // ** MySQL settings - You can get this info from your web host ** //
 
 if (file_exists(dirname(__FILE__) . '/local-config.php')) {
-    echo dirname(dirname(__FILE__)).'/shared/';
     include( dirname(__FILE__) . '/local-config.php' );
 } elseif (file_exists( dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php' ) ) {
     include( dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php' );
