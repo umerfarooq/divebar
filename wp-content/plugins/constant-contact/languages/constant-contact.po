@@ -1,0 +1,92 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Constant contact\n"
+"POT-Creation-Date: 2014-02-15 22:08+0800\n"
+"PO-Revision-Date: 2014-02-15 22:08+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../constant-contact.php:49 ../constant-contact.php:61
+#: ../constant-contact.php:153 ../constant-contact.php:158
+#: ../constant-contact.php:177 ../constant-contact.php:178
+msgid "Constant contact"
+msgstr ""
+
+#: ../constant-contact.php:51
+msgid "Check official website for more information"
+msgstr ""
+
+#: ../constant-contact.php:52
+msgid "click here"
+msgstr ""
+
+#: ../constant-contact.php:97
+msgid "Details successfully updated."
+msgstr ""
+
+#: ../constant-contact.php:103
+msgid "Constant contact username"
+msgstr ""
+
+#: ../constant-contact.php:105
+msgid "Please enter your constant contact username"
+msgstr ""
+
+#: ../constant-contact.php:107
+msgid "Constant contact password"
+msgstr ""
+
+#: ../constant-contact.php:109
+msgid "Please enter your constant contact password"
+msgstr ""
+
+#: ../constant-contact.php:111
+msgid "Constant contact group"
+msgstr ""
+
+#: ../constant-contact.php:113
+msgid "Please enter your constant contact group"
+msgstr ""
+
+#: ../constant-contact.php:115
+msgid "Widget title"
+msgstr ""
+
+#: ../constant-contact.php:117
+msgid "Please enter your widget title"
+msgstr ""
+
+#: ../constant-contact.php:119
+msgid "Word within text box"
+msgstr ""
+
+#: ../constant-contact.php:121
+msgid "Please enter text within text box"
+msgstr ""
+
+#: ../constant-contact.php:123
+msgid "Button caption"
+msgstr ""
+
+#: ../constant-contact.php:125
+msgid "Please enter your button caption"
+msgstr ""
+
+#: ../constant-contact.php:127
+msgid "Short description"
+msgstr ""
+
+#: ../constant-contact.php:129
+msgid "Please enter your widget short description"
+msgstr ""
+
+#: ../constant-contact.php:140
+msgid "Update Setting"
+msgstr ""

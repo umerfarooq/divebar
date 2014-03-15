@@ -560,3 +560,38 @@ ul.merchList li .merchFulRDetail{
     padding: 10px !important;
     max-width: 98% !important;
 }
+
+/*.....................NEWSLETTER CUSTOMIZATION.......................*/
+
+.newsletter {
+    float: left;
+    position: absolute;
+    right: 1%;
+}
+.cc_caption {
+    float: left;
+    margin-right: 5px;
+    color: #000;
+    padding: 0 !important;
+}
+.cc_textbox {
+    float: left;
+    margin-top: 15px;    
+}
+.cc_button {
+    float: left;
+    margin-top: 15px;    
+}
+.cc_textbox_button {
+    background-color: #E6AF00;
+    border-color: #E6AF00;
+    margin-left: 5px;
+    width: 40px !important;
+}
+.cc_msg { 
+    position: absolute;
+    top: 82%;
+    right: 16%;
+    padding: 0 !important;
+    line-height: 0 !important;
+}
