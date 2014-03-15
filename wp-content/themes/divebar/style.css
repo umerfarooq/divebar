@@ -589,6 +589,7 @@ ul.merchList li .merchFulRDetail{
     width: 40px !important;
 }
 .cc_msg { 
+    color: #EFEFEF !important;
     position: absolute;
     top: 82%;
     right: 16%;
