@@ -18,17 +18,17 @@
 
 if (file_exists(dirname(__FILE__) . '/local-config.php')) {
     include( dirname(__FILE__) . '/local-config.php' );
-//} elseif (file_exists(dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php')) {
-//    include( dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php' );
+} elseif (file_exists(dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php')) {
+    include( dirname(dirname(dirname(__FILE__))) . '/shared/db-config.php' );
 } else {
     /** The name of the database for WordPress */
     define('DB_NAME', 'divebar_development');
 
     /** MySQL database username */
-    define('DB_USER', 'divebar');
+    define('DB_USER', 'xxxx');
 
     /** MySQL database password */
-    define('DB_PASSWORD', 'divebardevelopment');
+    define('DB_PASSWORD', 'xxxxxxx');
 
     /** MySQL hostname */
     define('DB_HOST', 'mysql.bitbytez.com');
