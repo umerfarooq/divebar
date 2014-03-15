@@ -19,6 +19,7 @@
         $sub_categories = get_categories('hide_empty=0&child_of=' . $parent_category->cat_ID);
     else:
         $category_object = $category;
+        $sub_categories = get_categories('hide_empty=0&child_of=' . $category_object->cat_ID);
     endif;
 
     switch ($category_object->slug):

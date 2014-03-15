@@ -262,7 +262,7 @@ header nav.menu-nav ul li a {
     height: 320px;
 }
 
-.banner #caption {
+/*.banner #caption {
     position: absolute;
     bottom: 0px;
     height: 40px;
@@ -273,7 +273,7 @@ header nav.menu-nav ul li a {
     color: #000;
     font-weight: bold;
     font-size: 17px;
-}
+}*/
 
 .banner .locations li.directions {
     width: 65%;
