@@ -175,6 +175,7 @@
             <div id="layout">
 
                 <header>
+
                     <div class="social">
                         <ul>
                             <li class="facebook"><a href="<?php fb_link(); ?>" target="_blank">facebook</a></li>
@@ -188,16 +189,12 @@
 
                     <div id="logo">
                         <a href="/"><img src="<?php images('logo.png'); ?>" alt="Dive Bar" /></a>
-
                         <?php display_menu('locations_navigation', '', '', ''); ?>
-
-<!--                        <a class="st96" href="/">96th Street</a>
-                        <a class="st101" href="/">101st Street</a>
-                        <a class="st75" href="/">75th Street</a>-->
                     </div>
                     <nav>
                         <?php display_menu('header_navigation', '', '', ''); ?>
                     </nav>
+                    
                     <nav class="menu-nav">
                         <?php display_menu('menu_navigation', '', '', ''); ?>
                     </nav>

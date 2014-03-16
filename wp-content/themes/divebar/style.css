@@ -163,6 +163,7 @@ header nav {
     right:15px;
     z-index:1;
     font-size:15px;
+    text-align: center;
 }
 header nav ul {
     font-family: 'Conv_Gibson-Regular';
@@ -595,4 +596,11 @@ ul.merchList li .merchFulRDetail{
     right: 16%;
     padding: 0 !important;
     line-height: 0 !important;
+}
+
+/*......................COUNTER CUSTOMIZATION.........................*/
+.wordpress-hit-counter {
+    position: absolute;
+    top: 10%;
+    right: 20%;
 }
