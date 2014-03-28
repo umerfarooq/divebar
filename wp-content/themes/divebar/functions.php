@@ -91,7 +91,7 @@ function twitter_link() {
 }
 
 function instagram_link() {
-    echo 'http://instagram.com/divebarnyc';
+    echo 'http://instagram.com/divebarny';
 }
 
 function page_url($title) {
