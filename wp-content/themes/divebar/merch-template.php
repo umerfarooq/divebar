@@ -5,10 +5,14 @@
 
     <div class="headline">
         <h1><?php the_title(); ?></h1>
-        <p><?php the_field('headline'); ?></p>
+        <!--<p><?php the_field('headline'); ?></p>-->
     </div>
 
-    <div class="merch">
+    <div class='banner'>
+        <h1>Coming Soon</h1>
+    </div>
+
+    <!--<div class="merch">        
         <ul class="merchList">
             <?php if (get_field('products')): ?>
                 <?php while (the_repeater_field('products')): ?>
@@ -28,7 +32,7 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </ul>
-    </div>
+    </div>-->
 
     <div class="clr"></div>    
     

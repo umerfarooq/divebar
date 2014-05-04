@@ -2,7 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title><?php page_title(); ?></title>
+        <!--<title><?php page_title(); ?></title>-->
+        
+        <title>WELCOME to the DIVE BARS (NYC BARS)</title>
+        <META name="description" content="NYC Bars providing Upper West Side and Manhattan wine tastings, food, boubons, single malt scotches and tequilas" />
+        
         <link href="<?php echo get_stylesheet_uri(); ?>" rel="stylesheet" type="text/css" />
         <link href="<?php echo get_fonts_stylesheet_uri(); ?>" rel="stylesheet" type="text/css" />
         <?php wp_head(); ?>  
